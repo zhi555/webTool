@@ -1,0 +1,152 @@
+<div style="flex:1;margin-left: 100px;margin-top: 20px;" class="d-none  d-lg-block">
+		<a href="/" id="logo-2">
+				<img src="./static/img/logo.png" width="150px" alt="程序员一站式导航"
+						title="拖动 LOGO 到书签栏, 立即收藏 CXY521">
+		</a>
+</div>
+
+<div class="rows search_box" style="width: 66%">
+		<div id="search-boxes" class="panel panel-default">
+				<div class="panel-body">
+						<div class="rows">
+								<div class="ddd">
+										<ul class="search-list">
+												<div class="li current"><a href="javascript:;" class="btns">百度</a></div>
+												<div class="li"><a href="javascript:;" class="btns">编程</a></div>
+												<div class="li"><a href="javascript:;" class="btns">必应</a></div>
+												<div class="li"><a href="javascript:;" class="btns">微信</a></div>
+												<div class="li"><a href="javascript:;" class="btns">知乎</a></div>
+												<div class="li"><a href="javascript:;" class="btns">谷歌</a></div>
+										</ul>
+								</div>
+						</div>
+
+						<div class="tab-content search-tab-content">
+								<form id="form-search" action="https://www.baidu.com/s" method="get"
+										target="_blank">
+										<div class="input-group">
+												<div class="input-group-prepend dropdown">
+														<button id="search_check_btn" class="btn btn-search dropdown-toggle"
+																type="button" data-toggle="dropdown" aria-haspopup="true"
+																aria-expanded="false">
+																<img src="./static/img/index/image/baidu_favicon.ico" width="18px"
+																		height="18px" />
+																百度
+														</button>
+														<div class="dropdown-menu" id="search-icon" style="font-size: 1rem;">
+																<div class="dropdown-item" hidden="hidden">
+																		<img src="./static/img/index/image/baidu_favicon.ico"
+																				width="18px" height="18px" />
+																		百度
+																</div>
+																<div class="dropdown-item">
+																		<img src="./static/img/index/image/dev_favicon.ico" width="18px"
+																				height="18px" />
+																		编程
+																</div>
+																<div class="dropdown-item">
+																		<img src="./static/img/index/image/bing_favicon.ico"
+																				width="18px" height="18px" />
+																		必应
+																</div>
+																<div class="dropdown-item">
+																		<img src="./static/img/index/image/wecat_favicon.ico"
+																				width="18px" height="18px" />
+																		微信
+																</div>
+																<div class="dropdown-item">
+																		<img src="./static/img/index/image/zhihu_favicon.ico"
+																				width="18px" height="18px" />
+																		知乎
+																</div>
+																<div class="dropdown-item">
+																		<img src="./static/img/index/image/google_favicon.ico"
+																				width="18px" height="18px" />
+																		谷歌
+																</div>
+														</div>
+												</div>
+												<input type="text" class="form-control" id="search_input" autocomplete="off"
+														placeholder="百度一下,你就知道" name="wd" />
+												<div id="other_parameter">
+												</div>
+												<div class="input-group-append ">
+														<button class="btn btn-search" type="submit">
+																<i class="iconfont icon-search"
+																		style="color:#000;font-size: 1rem;"></i>
+														</button>
+												</div>
+										</div>
+								</form>
+
+						</div>
+				</div>
+		</div>
+</div>
+
+<!--  <div class="picScroll-top" style="margin-right: 8px;">
+</div> -->
+<script>
+	$(function(){
+		// 微信搜索URL附加参数 type: 1为公众号2为文章
+		let search_wechat_type = document.createElement('input')
+		search_wechat_type.name ='type'
+		search_wechat_type.value = '2'
+		search_wechat_type.type = 'hidden'
+		
+		// 搜索引擎
+		$('.search-list .li').on('click', function () {
+		    let index = $(this).index();
+		    $('.search-list .current').removeClass('current')
+		    $(this).addClass('current');
+		
+		    // 如果微信搜索指定文章搜索
+		    if(SEARCH_INPUT_PLACEHOLDER[index] == SEARCH_INPUT_PLACEHOLDER[3]){
+		        $("#other_parameter").prepend(search_wechat_type)
+		    } else {
+		        $("#other_parameter").empty()
+		    }
+		    // 搜索From&Input属性控制
+		    $('#form-search').attr('action', SEARCH_FROM_ACTION[index])
+		    $('#search_input').attr('placeholder', SEARCH_INPUT_PLACEHOLDER[index])
+		    $('#search_input').attr('name', SEARCH_INPUT_NAME[index])
+		
+		    // 搜索引擎图标联动
+		    $('#search-icon').children('.dropdown-item').removeAttr('hidden')
+		    $('#search_check_btn').empty()
+		    $('#search_check_btn').html($('#search-icon').children('.dropdown-item').eq(index).html())
+		    $('#search-icon').children('.dropdown-item').eq(index).attr('hidden', 'hidden')
+		})
+		
+		// 下拉搜索引擎
+		$('#search-icon').children('.dropdown-item').on('click', function () {
+		    let index = $(this).index();
+		    $('#search-icon').children('.dropdown-item').removeAttr('hidden')
+		    $(this).attr('hidden','hidden')
+		
+		    // 如果微信搜索指定文章搜索
+		    if(SEARCH_INPUT_PLACEHOLDER[index] === SEARCH_INPUT_PLACEHOLDER[3]){
+		        $("#other_parameter").prepend(search_wechat_type)
+		    } else {
+		        $("#other_parameter").empty()
+		    }
+		
+		    // 搜索From&Input属性控制
+		    $('#form-search').attr('action', SEARCH_FROM_ACTION[index])
+		    $('#search_input').attr('placeholder', SEARCH_INPUT_PLACEHOLDER[index])
+		    $('#search_input').attr('name', SEARCH_INPUT_NAME[index])
+		
+		    $('.search-list').children('.li').removeClass('current')
+		    $('.search-list').children('.li').eq(index).addClass('current')
+		    $('#search_check_btn').empty()
+		    $('#search_check_btn').html($(this).html())
+		})
+		
+		$('li[data-active="fid-0"]').addClass('active');
+		
+		
+		$('#pfgg').css({left: $('.main-content').offset().left - 175}).show()
+		
+		var headerheight = $('#header .container').height();
+	});
+</script>
