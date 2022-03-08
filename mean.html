@@ -1,0 +1,111 @@
+<div class="col-md-1s sidebars">
+		<div class="content-sidebar">
+				<dl id="goto">
+						<dt style="top: 83px;">
+								<!-- <span class="show-list"></span> -->
+						</dt>
+						<dd class="">
+								<a href="#header" class="auto-scroll" data-offset="-20"
+										data-speed="500">顶部</a>
+						</dd>
+						<dd class="">
+								<a href="#top_hot-tool" class="auto-scroll" data-offset="-20"
+										data-speed="500">常用工具</a>
+						</dd>
+						<dd class="">
+								<a href="#top_navigation_website" class="auto-scroll" data-offset="-20"
+										data-speed="500">导航网站列表</a>
+						</dd>
+						<dd class="">
+								<a href="#top_java_word" class="auto-scroll" data-offset="-20"
+										data-speed="500">知识文档收藏</a>
+						</dd>
+						<dd class="">
+								<a href="#top_common_video" class="auto-scroll" data-offset="-20"
+										data-speed="500">常用视频网站</a>
+						</dd>
+						<dd class="">
+								<a href="#top_other_web" class="auto-scroll" data-offset="-20"
+										data-speed="500">常用(其他)网站</a>
+						</dd>
+						<dd class="">
+								<a href="#top_tech" class="auto-scroll" data-offset="-20"
+										data-speed="500">技术社区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_relax" class="auto-scroll" data-offset="-20"
+										data-speed="500">摸鱼专区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_study" class="auto-scroll" data-offset="-20"
+										data-speed="500">学习平台</a>
+						</dd>
+						<dd class="">
+								<a href="#top_devtool" class="auto-scroll" data-offset="-20"
+										data-speed="500">开发工具</a>
+						</dd>
+						<dd class="">
+								<a href="#top_code" class="auto-scroll" data-offset="-20"
+										data-speed="500">练习专区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_work" class="auto-scroll" data-offset="-20"
+										data-speed="500">协同工作</a>
+						</dd>
+						<dd class="">
+								<a href="#top_media" class="auto-scroll" data-offset="-20"
+										data-speed="500">头部社区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_resources" class="auto-scroll" data-offset="-20"
+										data-speed="500">资源推荐</a>
+						</dd>
+						<dd class="">
+								<a href="#top_image" class="auto-scroll" data-offset="-20"
+										data-speed="500">图片专区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_video" class="auto-scroll" data-offset="-20"
+										data-speed="500">视频专区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_music" class="auto-scroll" data-offset="-20"
+										data-speed="500">音乐专区</a>
+						</dd>
+						<dd class="">
+								<a href="#top_web" class="auto-scroll" data-offset="-20"
+										data-speed="500">站长工具</a>
+						</dd>
+						<dd class="">
+								<a href="#top_efficiency_tool" class="auto-scroll" data-offset="-20"
+										data-speed="500">效率工具</a>
+						</dd>
+						<dd class="">
+								<a href="#top_else_tool" class="auto-scroll" data-offset="-20"
+										data-speed="500">其他工具</a>
+						</dd>
+				</dl>
+		</div>
+</div>
+<script>
+	$(function () {	
+	    //锚点跳转滑动效果
+	
+	    $('#goto').find('dd').find('a').click(function () {
+	        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	            var target = $(this.hash);
+	            target = target.length && target;
+	            if (target.length) {
+	                var targetOffset = target.offset().top;
+	                console.log(target)
+	                $('html,body').animate({
+	                        scrollTop: targetOffset - 15
+	                    },
+	                    500);
+	                return false;
+	            }
+	        }
+	    });
+	
+	})
+</script>
