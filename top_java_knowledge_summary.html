@@ -1,0 +1,94 @@
+<div class="indexbox_title cygjtabs" style="position: relative;display: flex">
+		<strong class="tabcheck-tools current" data-id="cygj">java知识汇总</strong>
+</div>
+<div class="categorytop default" id="catalog_cygj">
+		<ul align="left" style="display: flex;flex-wrap: wrap;">
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_csjy.pdf" target="_blank"
+								style="color:#444 !important">
+								参数校验(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_bswd.pdf" target="_blank"
+								style="color:#444 !important">
+								部署文档(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_cxfbwd.pdf" target="_blank"
+								style="color:#444 !important">
+								成型发布文档(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_jskj.pdf" target="_blank"
+								style="color:#444 !important">
+								技术框架(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<span data-toggle="modal" data-target="#gitCommandModal">
+						  Git命令
+						</span>
+				</li>
+				<!-- <li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<span data-toggle="modal" data-target="#gitCommandModal">
+						  后续内容增加模板
+						</span>
+				</li> -->
+				<!-- <li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="" target="_blank"
+								style="color:#444 !important">
+								后续内容增加模板
+						</a>
+				</li> -->
+		</ul>
+</div>
+
+<!--Git命令 Modal -->
+<div class="modal fade" id="gitCommandModal" tabindex="-1">
+  <div class="modal-dialog" style="width: 700px;margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-body" style="font-size: 17px;">
+        <h3>步骤1~6</h3>
+        <h4>一.没有仓库</h4>
+				<p>1.初始化仓库:  <code>git init</code></p>
+				<p>2.拷贝一份远程仓库(下载一个项目):<code>git clone https://github.com/zhi555/webTool.git</code></p>
+        <h4>二.拥有仓库</h4>
+				<p>3.下载远程代码并合并:<code>git pull</code></p>
+				<p>4.添加文件到暂存区(有新文件):<code>git add</code></p>
+				<p>5.提交暂存区到本地仓库:<code>git commit -m '第一次版本提交'</code></p>
+				<p>6.上传远程代码并合并:<code>git push origin master</code></p>
+				<h4>三.其他操作</h4>
+				<p>查看仓库当前的状态:<code>git status</code></p>
+				<p>查看历史提交记录:<code>git log</code></p>
+      </div>
+      <div style="height: 38px;display: flex;align-items: center;justify-content: flex-end;padding: 1rem;border-top: 1px solid #e9ecef;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 后续内容增加模板 -->
+<!-- <div class="modal fade" id="gitCommandModal" tabindex="-1">
+  <div class="modal-dialog" style="width: 700px;margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-body" style="font-size: 17px;">
+        <h4>1. 初始化仓库</h4>
+				<p>使用:  <code>git init</code></p>
+      </div>
+      <div style="height: 38px;display: flex;align-items: center;justify-content: flex-end;padding: 1rem;border-top: 1px solid #e9ecef;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->

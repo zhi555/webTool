@@ -1,3 +1,30 @@
+/**
+		使用CSS自定义样式
+	*/
+/*定义了滚动条整体样式；*/ 
+::-webkit-scrollbar{
+	height: 28px !important;
+	width: 10px !important;
+}
+		
+/*定义了滚动条滑块的样式*/
+::-webkit-scrollbar-thumb {
+	border-radius: 0;
+	border-style: dashed;
+	background-color: rgba(85, 85, 0, 0.4);
+	border-color: #e2242400;
+	border-width: 1.5px;
+	background-clip: padding-box;
+}
+
+code {
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #ca4440;
+    font-size: 90%;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
 
 #header {
     /*position: fixed;*/
