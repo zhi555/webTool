@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="canonical" href="https://www.cxy521.com">
+		<meta name="keywords" content="个人网站资源导航" />
+
+		<meta name="description" content="个人网站资源导航" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>个人网站资源导航</title>
+		<link rel="shortcut icon" href="./static/img/favicon.ico">
+		<link rel="icon" sizes="32x32" href="./static/img/favicon.ico">
+		<link rel="Bookmark" href="./static/img/favicon.ico">
+
+		<link rel="stylesheet" href="./static/css/bootstrap.css">
+		<link rel="stylesheet" href="./static/css/index.css">
+		<link rel="stylesheet" href="./static/css/common.css">
+
+	</head>
+
+	<body>
+		<header class="navbar navbar-expand-lg navbar-dark bg-dark" id="header">
+		</header>
+
+		<main id="body">
+			<div class="container">
+				<div class="container1">
+					<div style="display: flex;flex-wrap: wrap;margin-bottom:1rem" id="headerSearch">
+					</div>
+					<div class="row1">
+						<div class="leftcl" style="position: fixed;margin-top: -110px;">
+						</div>
+						<div class="row" style="margin-left: 103.66px;">
+							<div id="main-container">
+								<div class="main-content" style="position:relative">
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</main>
+
+		<!-- <footer class="text-muted small bg-dark py-4 mt-3 d-none d-lg-block" id="footer" style="background:#222c3c !important">
+		</footer> -->
+
+		<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+		<script type="text/javascript" src="./static/js/tipso.min.js"></script>
+		<script type="text/javascript" src="./static/js/index.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script> -->
+		<script type="text/javascript" src="./static/js/girls/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				$.ajax({
+					type: 'get',
+					url: "./json/mean.json",
+					async: false,
+					success: function(res) {
+				  console.info(res);
+					let ht0 = "";
+					let htmlContent="";
+					for(let i=0;i<res.length;i++){
+						if(res[i].index==0){
+							ht0 = "<dd class=\"\">\n" +
+                "			<a href='#"+res[i].hrefId+"' class=\"auto-scroll\" data-offset=\"-20\"\n" +
+                "			data-speed=\"500\">"+res[i].meanName+"</a>\n" +
+                "		</dd>";
+							continue;
+						}
+						let tool = res[i].tool;
+						if(res[i].beDetail){
+							let h1 = "";
+							let h2 = "";
+							for(let j=0;j<tool.length;j++){
+								let data = tool[j].data;
+								let h3 = "";
+								for(let k =0;k<data.length;k++){
+									let urlTitle = data[k].urlTitle;
+									if(data[k].isRecommend){
+										urlTitle = data[k].urlTitle + " <span style=\"color: red;\">(推荐)</span>";
+									}
+									h3 = h3 +"<li class=\"hot-item \">\n" +
+													 "    <div class=\"item-card\">\n" +
+													 "      <div class=\"icons\"><img src='"+data[k].imgUrl+"'></div>\n" +
+													 "      <div class=\"contents\">\n" +
+													 "        <a href='"+data[k].URL+"' class=\"website\" target=\"_blank\" rel=\"nofollow\" style=\"color:#444\">"+urlTitle+"</a>\n" +
+													 "        <p class=\"description\">"+data[k].introduce+"</p>\n" +
+													 "      </div>\n" +
+													 "    </div>\n" +
+													 "</li>";
+								}
+								h1 =h1 + "<strong style=\"font-weight: bold !important;\">"+tool[j].toolTitle+"</strong>";
+								h2 =h2 + "<div id='"+tool[j].toolId+"'>\n" +
+												 "  <section data-catalog=\"download\" class=\"active\">\n" +
+												 "    <ul class=\"website-list\">\n" + h3 +
+												 "    </ul>\n" +
+												 "  </section>\n" +
+												 "</div>";
+							}
+							let h0 = "<div class=\"indexbox fNAV 0\" id='"+res[i].hrefId+"' style=\"position:relative\">\n"+
+													 "<div class=\"indexbox_title\">\n" + h1 +
+													 "</div>\n"+ h2 +
+											 "</div>\n" +
+											 "<div class=\"clearfix\"></div>";
+							htmlContent = htmlContent + h0;
+						}else{
+							let h11 = "";
+							let h22 = "";
+							let hScript = "";
+							for(let j=0;j<tool.length;j++){
+								let data = tool[j].data;
+								let h33 = "";
+								for(let k =0;k<data.length;k++){
+									let urlTitle = data[k].urlTitle;
+									if(data[k].isRecommend){
+										urlTitle = data[k].urlTitle + " <span style=\"color: red;\">(推荐)</span>";
+									}
+									h33 = h33 +"<li>\n" +
+															"  <img src='"+data[k].imgUrl+"' width=\"16\">&nbsp;\n" +
+															"  <a href='"+data[k].URL+"' target=\"_blank\" style=\"color:#444 !important;\">"+urlTitle+"</a>\n" +
+															"</li>";
+								}
+								let ss="";
+								if(j==0){
+									h11 =h11 + "<strong class=\"tabcheck-tools current\" data-id='"+tool[j].toolId+"'>"+tool[j].toolTitle+"</strong>";
+								}else{
+									ss = "style=\"display: none;\"";
+									h11 =h11 + "<strong class=\"tabcheck-tools\" data-id='"+tool[j].toolId+"'>"+tool[j].toolTitle+"</strong>";
+								}
+								h22 =h22 +"<div class=\"categorytop default\" id='catalog_"+tool[j].toolId+"'"+ss+">\n" +
+													"  <ul align=\"left\" style=\"display: flex;flex-wrap: wrap;\">\n" + h33 +
+													"  </ul>\n" +
+													"</div>";
+							}
+							let h00 = "<div class=\"indexbox\" id='"+res[i].hrefId+"'>\n"+
+													"<div class=\"indexbox_title cygjtabs\" style=\"position: relative;display: flex\">\n" + h11 +
+													"</div>\n" + h22 +
+												"</div>\n" +
+												"<div class=\"clearfix\"></div>";
+							htmlContent = htmlContent + h00;
+						}
+						let s= "<dd class=\"\">\n" +
+                "			<a href='#"+res[i].hrefId+"' class=\"auto-scroll\" data-offset=\"-20\"\n" +
+                "			data-speed=\"500\">"+res[i].meanName+"</a>\n" +
+                "		</dd>";
+						ht0 = ht0+s;
+					}
+					let ht="<div class=\"col-md-1s sidebars\">\n" +
+                "		<div class=\"content-sidebar\">\n" +
+                "				<dl id=\"goto\">\n" +
+                "						<dt style=\"top: 83px;\">\n" +
+                "						</dt>\n" +ht0 +
+                "				</dl>\n" +
+                "		</div>\n" +
+                "</div>";
+					$(".leftcl").html(ht);
+					$(".main-content").html(htmlContent);
+					}
+				});
+				$("#header").load("header.html");
+				$("#headerSearch").load("headerSearch.html");
+				
+				$("#top_else_tool").load("top_else_tool.html");
+				
+				
+				$("#top_java_knowledge_summary").load("top_java_knowledge_summary.html");
+				// $("#footer").load("footer.html");
+				
+				$('.cygjtabs').find('strong').on('click', function () {
+				    $('#catalog_' + $('.cygjtabs').find('.current').attr('data-id')).hide();
+				    $('.cygjtabs').find('.current').removeClass('current');
+				    $(this).addClass('current');
+				    $('#catalog_' + $(this).attr('data-id')).show()
+				});
+				
+			});
+		</script>
+
+		<div style="display: none;">
+			<!-- <script src="https://s22.cnzz.com/z_stat.php?id=1272948323&web_id=1272948323" language="JavaScript"></script> -->
+		</div>
+	</body>
+
+</html>

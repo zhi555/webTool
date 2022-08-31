@@ -1,0 +1,127 @@
+<div class="indexbox_title cygjtabs" style="position: relative;display: flex">
+		<strong class="tabcheck-tools current" data-id="cygj">java知识汇总</strong>
+</div>
+<div class="categorytop default" id="catalog_cygj">
+		<ul align="left" style="display: flex;flex-wrap: wrap;">
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_csjy.pdf" target="_blank"
+								style="color:#444 !important">
+								参数校验(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_bswd.pdf" target="_blank"
+								style="color:#444 !important">
+								部署文档(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_cxfbwd.pdf" target="_blank"
+								style="color:#444 !important">
+								成型发布文档(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="./static/pdf/dfsx_jskj.pdf" target="_blank"
+								style="color:#444 !important">
+								技术框架(dfsx)
+						</a>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<span data-toggle="modal" data-target="#gitCommandModal">
+						  Git命令
+						</span>
+				</li>
+				<li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<span data-toggle="modal" data-target="#jsNoteModal">
+						  js笔记
+						</span>
+				</li>
+				<!-- <li>
+						<img src="./static/img/index/study/ma.ico" width="16">&nbsp;
+						<a href="" target="_blank"
+								style="color:#444 !important">
+								后续内容增加模板
+						</a>
+				</li> -->
+		</ul>
+</div>
+
+<!--Git命令 Modal -->
+<div class="modal fade" id="gitCommandModal" tabindex="-1">
+  <div class="modal-dialog" style="width: 700px;margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-body" style="font-size: 17px;">
+        <h3>步骤1~9</h3>
+        <h4>一.没有仓库</h4>
+				<p>1.初始化仓库:  <code>git init</code></p>
+				<p>2.拷贝一份远程仓库(下载一个项目):<code>git clone https://github.com/zhi555/webTool.git</code></p>
+        <h4>二.拥有仓库</h4>
+				<p>3.下载远程代码并合并:<code>git pull origin master</code></p>
+				<p>4.查看仓库当前的状态:<code>git status</code></p>
+				<p>5.添加文件到暂存区(有新文件):<code>git add .</code></p>
+				<p>6.查看仓库当前的状态:<code>git status</code></p>
+				<p>7.提交暂存区到本地仓库:<code>git commit -m "第一次版本提交"</code></p>
+				<p>8.下载远程代码并合并:<code>git pull origin master</code></p>
+				<p>9.上传远程代码并合并:<code>git push -u origin master</code></p>
+				<h4>三.分支操作</h4>
+				<p>以后补充。。。<code></code></p>
+				<h4>四.其他操作</h4>
+				<p>查看历史提交记录:<code>git log</code></p>
+      </div>
+      <div style="height: 38px;display: flex;align-items: center;justify-content: flex-end;padding: 1rem;border-top: 1px solid #e9ecef;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- js笔记 Modal -->
+<div class="modal fade" id="jsNoteModal" tabindex="-1">
+  <div class="modal-dialog" style="width: 700px;margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-body" style="font-size: 17px;">
+        <h4>1. js</h4>
+				<p>保留两位有效数字：
+					<code>var a = 0.5548000;</code>
+					<code>a.toFixed(2);</code>
+					<code>a==0.55;</code>
+				</p>
+				<!-- <p>
+					<code>a.toFixed(2)</code>
+				</p> -->
+				<hr />
+				<h4>2. js文档</h4>
+				<hr />
+				<p>
+					<a href="http://hemin.cn/jq/" target="_blank" style="color:#0000ff !important;font-style: italic;text-decoration:underline;">jQuery文档</a>
+					<!-- <code>git init</code> -->
+				</p>
+      </div>
+      <div style="height: 38px;display: flex;align-items: center;justify-content: flex-end;padding: 1rem;border-top: 1px solid #e9ecef;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 后续内容增加模板 -->
+<!-- <div class="modal fade" id="gitCommandModal" tabindex="-1">
+  <div class="modal-dialog" style="width: 700px;margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-body" style="font-size: 17px;">
+        <h4>1. 初始化仓库</h4>
+				<p>使用:  <code>git init</code></p>
+      </div>
+      <div style="height: 38px;display: flex;align-items: center;justify-content: flex-end;padding: 1rem;border-top: 1px solid #e9ecef;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
