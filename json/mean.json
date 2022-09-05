@@ -1008,6 +1008,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://ol.woobx.cn/",
+						"urlTitle":"一个木函",
+						"isRecommend":true,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"https://www.yikm.net",
 						"urlTitle":"小霸王",
 						"isRecommend":false,
