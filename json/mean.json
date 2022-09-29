@@ -672,6 +672,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://www.67tool.com/",
+						"urlTitle":"即时工具",
+						"isRecommend":true,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"http://ilxdh.com/",
 						"urlTitle":"龙轩导航",
 						"isRecommend":true,
