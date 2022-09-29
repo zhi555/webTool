@@ -2457,6 +2457,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/image/iloveimg.png",
+						"URL":"https://imagestool.com/zh_CN/",
+						"urlTitle":"imagestool在线编辑",
+						"isRecommend":true,
+						"introduce":"imagestool一款免费在线处理图片文件的网站"
+					},
+					{
+						"imgUrl":"./static/img/index/image/iloveimg.png",
 						"URL":"https://www.iloveimg.com/zh-cn",
 						"urlTitle":"图片在线编辑",
 						"isRecommend":false,
