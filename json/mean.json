@@ -1015,6 +1015,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://www.ijiaodui.com/",
+						"urlTitle":"爱校对官网-查错别字",
+						"isRecommend":true,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"https://ol.woobx.cn/",
 						"urlTitle":"一个木函",
 						"isRecommend":true,
