@@ -1232,6 +1232,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/tech/cnblogs.png",
+						"URL":"http://c.biancheng.net/",
+						"urlTitle":"C语言中文网",
+						"isRecommend":false,
+						"introduce":"C语言中文网"
+					},
+					{
+						"imgUrl":"./static/img/index/tech/cnblogs.png",
 						"URL":"https://www.cnblogs.com/",
 						"urlTitle":"博客园",
 						"isRecommend":false,
