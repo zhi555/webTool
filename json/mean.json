@@ -1022,6 +1022,13 @@
 				"data":[
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://buyanbuyan.com/",
+						"urlTitle":"电脑便捷工具导航",
+						"isRecommend":true,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"https://www.ijiaodui.com/",
 						"urlTitle":"爱校对官网-查错别字",
 						"isRecommend":true,
@@ -1192,6 +1199,13 @@
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"http://mail.orientech.cc",
 						"urlTitle":"东方申信mail(zhangzhifeng@orientech.cc)",
+						"isRecommend":false,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"http://140.207.40.162:3128/wui/index.html#/?_key=01v884",
+						"urlTitle":"东方申信新OA(zhangzf)",
 						"isRecommend":false,
 						"introduce":""
 					}
