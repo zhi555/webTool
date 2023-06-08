@@ -679,6 +679,13 @@
 					},
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://www.102699.com/",
+						"urlTitle":"Zerone",
+						"isRecommend":true,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"http://ilxdh.com/",
 						"urlTitle":"龙轩导航",
 						"isRecommend":true,
