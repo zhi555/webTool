@@ -686,6 +686,13 @@
 					},
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://www.videofk.com/zh-CN/online-video-download",
+						"urlTitle":"在线视频下载",
+						"isRecommend":false,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"http://ilxdh.com/",
 						"urlTitle":"龙轩导航",
 						"isRecommend":true,
