@@ -1225,7 +1225,7 @@
 					},
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
-						"URL":"http://140.207.40.162:3128/wui/index.html#/?_key=01v884",
+						"URL":"http://192.168.0.194",
 						"urlTitle":"东方申信新OA(zhangzf)",
 						"isRecommend":false,
 						"introduce":""
