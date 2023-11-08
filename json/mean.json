@@ -707,6 +707,20 @@
 					},
 					{
 						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://acgdhw.com/",
+						"urlTitle":"ACG导航",
+						"isRecommend":false,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
+						"URL":"https://www.moooyu.com/",
+						"urlTitle":"墨鱼导航",
+						"isRecommend":false,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/quickdraw.ico",
 						"URL":"https://www.bookmarkearth.com/",
 						"urlTitle":"书签地球",
 						"isRecommend":false,
@@ -968,6 +982,13 @@
 						"imgUrl":"./static/img/index/relax/zxzj.ico",
 						"URL":"https://www.bilibili.com/",
 						"urlTitle":"B站",
+						"isRecommend":false,
+						"introduce":""
+					},
+					{
+						"imgUrl":"./static/img/index/relax/zxzj.ico",
+						"URL":"https://www.kekedy.tv",
+						"urlTitle":"可可影视",
 						"isRecommend":false,
 						"introduce":""
 					},
